@@ -44,7 +44,7 @@ const MyLineChart = () => {
           name: 'Supplier G',
           price: 3490,
           sales: 4300,
-          amt: 2220,
+          amt: 2212,
         },
       ];
 
