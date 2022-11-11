@@ -1,12 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import './Register.css';
 
 const Register = () => {
-    const handleRegister = () =>{
-
+    const navigate = useNavigate()
+    const handleRegister = event =>{
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        console.log(event.target.name.value, event.target.email.value, event.target.password.value)
     }
     const navigateLogin = () =>{
-
+        navigate('/login')
     }
     return (
         <div className='register-form'>
@@ -17,7 +23,8 @@ const Register = () => {
                 <input type="email" name="email" id="" placeholder='Email Address' required/>
                 
                 <input type="password" name="password" id="" placeholder='Password' required/>
-                <input type="submit" value="Register" />
+                {/* <input type="submit" value="Register" /> */}
+                <button className='register_button' type='submit'>Register</button>
             </form>
             <p>Already have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
         </div>
