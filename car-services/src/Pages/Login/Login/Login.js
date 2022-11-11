@@ -1,12 +1,24 @@
-import { Button } from "bootstrap";
-import React from "react";
-import { Form, Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { Button, Form } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const handleSubmit = () => {};
-  const emailRef = () => {};
-  const passwordRef = () => {};
-  const navigateRegister = () => {};
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
+  const navigate = useNavigate()
+  const handleSubmit = event => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    console.log(email, password);
+  }
+  const navigateRegister = event => {
+      navigate('/register')
+  };
+  // const handleSubmit = () => {};
+  // const emailRef = () => {};
+  // const passwordRef = () => {};
   return (
     <div className="container w-50 mx-auto">
       <h2 className="text-primary text-center mt-2">Please Login</h2>
@@ -40,7 +52,7 @@ const Login = () => {
           Submit
         </Button>
       </Form>
-      <p>
+       <p>
         New to Genius Car?{" "}
         <Link
           to="/register"
@@ -49,7 +61,7 @@ const Login = () => {
         >
           Please Register
         </Link>{" "}
-      </p>
+      </p> 
     </div>
   );
 };
