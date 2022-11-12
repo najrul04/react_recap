@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -40,10 +41,15 @@ const Register = () => {
                 <input type="email" name="email" id="" placeholder='Email Address' required/>
                 
                 <input type="password" name="password" id="" placeholder='Password' required/>
+                <input type="checkbox" name="terms" id="terms" />
+                <label htmlFor="terms"> Accept Terms and Conditions</label>
                 {/* <input type="submit" value="Register" /> */}
-                <button className='register_button' type='submit'>Register</button>
+                {/* <button type='submit'>Register</button> */}
+                <Button className='register_button' variant="primary w-50 mx-auto d-block mb-2 mt-2" type="submit">
+          Register
+        </Button>
             </form>
-            <p>Already have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+            <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
             <SocialLogin/>
         </div>
     );
