@@ -8,7 +8,7 @@ const ServiceDetail = () => {
             <h2>Service Details: {serviceId}</h2>
             <div className='text-center'>
             <Link to='/checkout'> 
-            <button className='btn btn-primary'>Proceed Checkout</button>
+            <button className='btn btn-dark'>Proceed Checkout</button>
              </Link>
             </div>
         </div>

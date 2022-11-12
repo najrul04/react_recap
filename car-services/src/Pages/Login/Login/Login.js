@@ -63,7 +63,7 @@ const Login = () => {
   // const passwordRef = () => {};
   return (
     <div className="container w-50 mx-auto">
-      <h2 className="text-primary text-center mt-2">Please Login</h2>
+      <h2 className="text-dark text-center mt-2">Please Login</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
