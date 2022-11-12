@@ -9,18 +9,18 @@ import Expert from '../Expert/Expert';
 import './Experts.css';
 
 const experts = [
-    {id: 1, name: 'Will Smith', img: company1},
-    {id: 2, name: 'Chris Rock', img: company2},
-    {id: 3, name: 'Dwayne Rock', img: company3},
-    {id: 4, name: 'Messy Vai', img: company4},
-    {id: 5, name: 'Ronaldo Bro', img: company5},
-    {id: 6, name: 'Stachy Jhonson', img: company6},
+    {id: 1, name: 'Ubisoft', img: company1, company: 'Ubisoft has become one of the largest video game publishers, and it has the largest in-house development team'},
+    {id: 2, name: 'Nintendo Switch', img: company2, company: 'Nintendos mission is to put smiles on the faces of everyone we touch.The company is known for worldwide.'},
+    {id: 3, name: 'Sony', img: company3, company: 'Sony Interactive Entertainment handles the research and development.Spider Man is the most recent one.'},
+    {id: 4, name: 'Tencent', img: company4, company: 'Tencent is a world-leading internet and technology companyto produce more user friendly game.'},
+    {id: 5, name: 'EA Sports', img: company5, company: 'EA Sports is a division of Electronic Arts that develops and publishes sports video games.'},
+    {id: 6, name: 'Activision', img: company6, company: 'Activision Publishing, Inc. is an American video game publisher based in Santa Monica, California.'},
 ]
 
 const Experts = () => {
     return (
         <div id='experts' className='container'>
-            <h2 className='text-primary text-center mt-5'>Game Companies</h2>
+            <h2 className='text-dark text-center mt-5'>Game Companies</h2>
             <div className="row">
                 {
                     experts.map(expert=> <Expert
