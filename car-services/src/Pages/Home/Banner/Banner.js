@@ -36,8 +36,8 @@ const Banner = () => {
                 <Carousel.Caption>
                     <h3>God of War</h3>
                 </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
+                </Carousel.Item>
+                <Carousel.Item>
                 <img
                     className="d-block w-100"
                     src={banner3}
